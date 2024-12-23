@@ -1,0 +1,18 @@
+name: "Podcast Generator" 
+author: "Alex Jacobson" 
+description: "Practice for Linkedin Learning Github Certificate course by Ray Villalobos."
+runs: 
+  using: "docker"
+  image: "Dockerfile"
+branding:
+  icon: "git-branch"
+  color: "green"
+inputs: 
+  email: 
+    description: "The commiter's email address"
+    required: True
+    default: ${{ github.actor }}@localhost
+  name: 
+      description: "The commiter's name"
+      required: True
+      default: ${{ github.actor }}
